@@ -9,6 +9,10 @@ struct LanguageSettings {
     bool treeSitterEnabled = false;
     QString executable = QStringLiteral("tree-sitter");
     QString configPath;
+    bool lspEnabled = false;
+    QString lspExecutable = QStringLiteral("clangd");
+    QString lspArguments = {};
+    QString lspExtensions = QStringLiteral("c,cpp,cc,cxx,h,hpp,hxx");
 };
 struct SyntaxSpan {
     int start = 0;

@@ -79,7 +79,9 @@ bool AppStorage::initialize(bool importLegacySettings)
         {"animation/interface", true}, {"animation/cursor", true}, {"animation/selection", true}, {"animation/speed", 1.0},
         {"editor/fontFamily", QString()}, {"editor/fontSize", 13}, {"editor/wrap", false}, {"search/fuzzy", true},
         {"language/treeSitterEnabled", false}, {"language/treeSitterExecutable", QStringLiteral("tree-sitter")},
-        {"language/treeSitterConfigPath", QString()}};
+        {"language/treeSitterConfigPath", QString()}, {"language/lspEnabled", false},
+        {"language/lspExecutable", QStringLiteral("clangd")}, {"language/lspArguments", QString()},
+        {"language/lspExtensions", QStringLiteral("c,cpp,cc,cxx,h,hpp,hxx")}};
     for (auto it = defaults.cbegin(); it != defaults.cend(); ++it)
         if (!m_editor->contains(it.key())) m_editor->setValue(it.key(), it.value());
     if (!m_system->contains("meta/schemaVersion")) m_system->setValue("meta/schemaVersion", 1);

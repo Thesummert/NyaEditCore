@@ -12,6 +12,7 @@ add_library(nya_core STATIC
     Encoding.cpp Encoding.h
     FileIO.cpp FileIO.h
     FileSearch.cpp FileSearch.h
+    LspClient.cpp LspClient.h
     Search.cpp Search.h
     TreeSitter.cpp TreeSitter.h)
 target_compile_features(nya_core PUBLIC cxx_std_17)
